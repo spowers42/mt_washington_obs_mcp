@@ -1,0 +1,325 @@
+{
+  "LastUpdated": "2026-06-08 05:29:40",
+  "FeedExpirationDateTime": "2026-06-09 05:00:00",
+  "ForecasterName": "Madelynn Smith",
+  "ForecastJobTitle": "Weather Observer and Meteorologist",
+  "SummitConditions": {
+    "Weather": "In the clear under mostly clear skies",
+    "RH": "64%",
+    "Imperial": {
+      "Temperature": "37 \u00b0F",
+      "Wind": "50\u00b0(NE) 35 mph",
+      "Visibility": "90 miles",
+      "BarometricPressure": "24.02 inHg and rising",
+      "GroundConditions": "Damp rocks"
+    },
+    "Metric": {
+      "Temperature": "3 \u00b0C",
+      "Wind": "50\u00b0(NE) 56 km/hr",
+      "Visibility": "145 kilometers",
+      "BarometricPressure": "81.34 kPa and rising",
+      "GroundConditions": "Damp rocks"
+    }
+  },
+  "TwentyfourHourStatistics": {
+    "Imperial": {
+      "MaxTemperature": "49\u00b0F",
+      "MinTemperature": "35\u00b0F",
+      "PeakWindGust": "280\u00b0 (W) 88 mph",
+      "AvgWindSpeed": "44.5 mph",
+      "LiquidPrecipitation": "0.56 inches",
+      "Snowfall": "0.0 inches"
+    },
+    "Metric": {
+      "MaxTemperature": "9.4\u00b0C",
+      "MinTemperature": "1.7\u00b0C",
+      "PeakWindGust": "280\u00b0 (W) 142 km/hr",
+      "AvgWindSpeed": "71.6 km/hr",
+      "LiquidPrecipitation": "14.2 mm",
+      "Snowfall": "0.0 cm"
+    }
+  },
+  "Almanac": {
+    "Imperial": {
+      "SnowfallThisMonth": "0.2 inches",
+      "RecordHighTemperature": "65\u00b0F (2011)",
+      "RecordLowTemperature": "21\u00b0F (1980)",
+      "AvgDailyTemperature": "44\u00b0F",
+      "AvgMonthlyTemperature": "45\u00b0F",
+      "AvgMonthlyMeltedPrecipitation": "8.4 inches",
+      "AvgMonthlySnowfall": "1 inches",
+      "AvgMonthlyWind": "28 mph"
+    },
+    "Metric": {
+      "SnowfallThisMonth": "0.5 cm",
+      "RecordHighTemperature": "18\u00b0C (2011)",
+      "RecordLowTemperature": "-6\u00b0C (1980)",
+      "AvgDailyTemperature": "7\u00b0C",
+      "AvgMonthlyTemperature": "7.2\u00b0C",
+      "AvgMonthlyMeltedPrecipitation": "21.34 cm",
+      "AvgMonthlySnowfall": "2.5 cm",
+      "AvgMonthlyWind": "44 km/hr"
+    },
+    "Sunrise": "4:55",
+    "Sunset": "20:33",
+    "TotalLengthOfDay": "0 Hours and 0 Minutes"
+  },
+  "SummitOutlook": {
+    "Alert": "",
+    "AlertExpirationDateTime": "1972-01-01 01:00:00",
+    "Discussion": "Surface high pressure over the region gradually shifts southward through the forecast period, with upper-level ridging moving overhead on Tuesday. A potent shortwave trough then approaches late Tuesday night.<br />\r\n<br />\r\nDry weather is expected through the forecast period under the influence of surface high pressure over New England. Other than a few upper-level clouds moving through from the north, mostly sunny skies prevail through Monday, with winds dropping to moderate speeds and remaining so into Tuesday night. The surface high slowly sags southward over the course of the day Monday into Monday night, with upper-level ridging beginning to shift overhead. This pattern will allow a warming trend to begin through mid week, with temperatures rising above seasonal averages on Tuesday. Upper and mid-level cloud coverage will increase Tuesday afternoon ahead of a shortwave trough embedded in the upper-level ridge rotating through the Great Lakes region towards New England, with skies becoming mostly cloudy overnight Tuesday. Though mostly cloudy above, the higher summits will remain in the clear however into Wednesday morning. As the axis of the ridge moves directly overhead late Tuesday night, winds will further decline, and may even become light and variable at times heading into early Wednesday morning.<br><span style='font-weight:bold;'>Madelynn Smith -- Weather Observer and Meteorologist<br>Updated at 5:29 AM on Monday</span>",
+    "Forecast1": {
+      "Period": "Monday",
+      "Synopsis": "In the clear under mostly sunny skies.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Upper 40s",
+        "Wind": "NE shifting NW at 30-45 mph early, 10-25 mph midday, then 15-30 mph late",
+        "WindChill": "25 to 35 above, then rising"
+      },
+      "Metric": {
+        "Temperature": "Upper 40s",
+        "Wind": "NE shifting NW at 30-45 mph early, 10-25 mph midday, then 15-30 mph late",
+        "WindChill": "25 to 35 above, then rising"
+      }
+    },
+    "Forecast2": {
+      "Period": "Monday Night",
+      "Synopsis": "In the clear under mostly clear skies.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Mid 40s",
+        "Wind": "NW at 20-35 mph, increasing to 25-40 mph by mid-night",
+        "WindChill": "Falling to 25 to 35 above"
+      },
+      "Metric": {
+        "Temperature": "Mid 40s",
+        "Wind": "NW at 20-35 mph, increasing to 25-40 mph by mid-night",
+        "WindChill": "Falling to 25 to 35 above"
+      }
+    },
+    "Forecast3": {
+      "Period": "Tuesday",
+      "Synopsis": "In the clear under increasingly cloudy skies",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Mid 50s",
+        "Wind": "NW shifting W at 25-40 mph early, 15-30 mph midday, then 30-45 mph late.",
+        "WindChill": "25 to 35 above early, then rising"
+      },
+      "Metric": {
+        "Temperature": "Mid 50s",
+        "Wind": "NW shifting W at 25-40 mph early, 15-30 mph midday, then 30-45 mph late.",
+        "WindChill": "25 to 35 above early, then rising"
+      }
+    },
+    "Forecast4": {
+      "Period": "Tuesday Night",
+      "Synopsis": "In the clear under mostly cloudy skies",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Around 50",
+        "Wind": "W at 25-40 mph, rapidly decreasing to 5-20 mph, possibly becoming light and variable at times late. ",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Around 50",
+        "Wind": "W at 25-40 mph, rapidly decreasing to 5-20 mph, possibly becoming light and variable at times late. ",
+        "WindChill": ""
+      }
+    }
+  },
+  "ValleyOutlook": {
+    "Alert": "",
+    "AlertExpirationDateTime": "1972-01-01 01:00:00",
+    "Discussion": "Surface high pressure over the region gradually shifts southward through the forecast period, with upper-level ridging moving overhead on Tuesday. A potent shortwave trough then approaches late Tuesday night.<br />\r\n<br />\r\nDry weather and light winds are expected through the forecast period under the influence of surface high pressure over New England. With clear skies Sunday night, some patches of fog have developed Monday morning, but will quickly dissipate by mid-morning. Other than a few upper-level clouds moving through from the north, mostly sunny skies prevail through Monday. The surface high slowly sags southward over the course of the day Monday into Monday night, with upper-level ridging beginning to shift overhead. This pattern will allow a warming trend to begin through mid week, with temperatures rising into the mid 80s on Tuesday. Upper and mid-level cloud coverage will increase Tuesday afternoon, though with abundant sunshine still expected, ahead of a shortwave trough embedded in the upper-level ridge rotating through the Great Lakes region towards New England, with skies then becoming partly cloudy overnight Tuesday.<br />\r\n",
+    "Forecast1": {
+      "Period": "Monday",
+      "Synopsis": "Mostly sunny.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Upper 70s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Upper 70s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast2": {
+      "Period": "Monday Night",
+      "Synopsis": "Mostly clear.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Around 50",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Around 50",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast3": {
+      "Period": "Tuesday",
+      "Synopsis": "Mostly sunny.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Mid 80s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Mid 80s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast4": {
+      "Period": "Tuesday Night",
+      "Synopsis": "Partly cloudy.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Around 60",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Around 60",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    }
+  },
+  "NorthOutlook": {
+    "Alert": "",
+    "AlertExpirationDateTime": "1972-01-01 01:00:00",
+    "Forecast1": {
+      "Period": "Monday",
+      "Synopsis": "Patchy dense fog this morning. Mostly sunny. Visibility one quarter mile or less at times this morning.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Upper 70s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Upper 70s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast2": {
+      "Period": "Monday Night",
+      "Synopsis": "Mostly clear. Patchy fog late.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Mid 40s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Mid 40s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast3": {
+      "Period": "Tuesday",
+      "Synopsis": "Mostly sunny.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Lower 80s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Lower 80s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast4": {
+      "Period": "Tuesday Night",
+      "Synopsis": "Partly cloudy.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Mid 50s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Mid 50s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    }
+  },
+  "SouthOutlook": {
+    "Alert": "",
+    "AlertExpirationDateTime": "1972-01-01 01:00:00",
+    "Forecast1": {
+      "Period": "Monday",
+      "Synopsis": "Mostly sunny.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Around 80",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Around 80",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast2": {
+      "Period": "Monday Night",
+      "Synopsis": "Mostly clear.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Mid 50s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Mid 50s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    },
+    "Forecast3": {
+      "Period": "Tuesday",
+      "Synopsis": "Mostly sunny.",
+      "HighLow": "High",
+      "Imperial": {
+        "Temperature": "Upper 80s",
+        "Wind": "Light and variable, becoming W around 10 mph in the afternoon",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Upper 80s",
+        "Wind": "Light and variable, becoming W around 10 mph in the afternoon",
+        "WindChill": ""
+      }
+    },
+    "Forecast4": {
+      "Period": "Tuesday Night",
+      "Synopsis": "Mostly clear early, then becoming partly cloudy.",
+      "HighLow": "Low",
+      "Imperial": {
+        "Temperature": "Lower 60s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      },
+      "Metric": {
+        "Temperature": "Lower 60s",
+        "Wind": "Light and variable",
+        "WindChill": ""
+      }
+    }
+  }
+}

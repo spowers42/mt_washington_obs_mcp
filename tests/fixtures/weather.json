@@ -1,0 +1,20 @@
+{
+  "summitConditions": {
+    "LastUpdated": "2026-06-08 14:20:00",
+    "ExpirationDateTime": "2026-06-08 15:20:00",
+    "Imperial": {
+      "Temperature": "47\u00b0F",
+      "Wind": "12 mph",
+      "Gust": "22 mph",
+      "WindChill": "42\u00b0F"
+    },
+    "Metric": {
+      "Temperature": "8\u00b0C",
+      "Wind": "19 km/hr",
+      "Gust": "35 km/hr",
+      "WindChill": "6\u00b0C"
+    },
+    "Direction": "290\u00b0(WNW)",
+    "metar": "KMWN 081750Z 30012KT 100SM FEW006 SCT010 SCT140 BKN180 BKN220 09/05 RMK 10092 20046"
+  }
+}
