@@ -16,12 +16,12 @@ tasks:
   lint:
     desc: Run ruff linter
     cmds:
-      - uv run ruff check src/
+      - uv run ruff check src/ tests/
 
   lint-fix:
     desc: Auto-fix lint issues with ruff
     cmds:
-      - uv run ruff check --fix src/
+      - uv run ruff check --fix src/ tests/
 
   typecheck:
     desc: Run mypy type checker

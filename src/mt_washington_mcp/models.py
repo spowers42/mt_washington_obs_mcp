@@ -1,5 +1,7 @@
 import re
 from enum import StrEnum
+from typing import cast
+
 from pydantic import BaseModel, Field, field_validator, model_validator
 
 
@@ -105,20 +107,20 @@ class UnitsData(BaseModel):
             unit = TemperatureUnit.CELSIUS if "°C" in value else TemperatureUnit.FAHRENHEIT
             return {"value": value, "unit": unit}
 
-        wind: dict[str, object] = {"speed": _speed(data["Wind"])}
+        wind: dict[str, object] = {"speed": _speed(cast(str, data["Wind"]))}
 
         gust = data.get("Gust")
         if gust not in (NULL, None, ""):
-            wind["gust"] = _speed(gust)
+            wind["gust"] = _speed(cast(str, gust))
 
         wind_chill = data.get("WindChill")
         if wind_chill in (NULL, None, ""):
             wind_chill = None
         else:
-            wind_chill = _temp(wind_chill)
+            wind_chill = _temp(cast(str, wind_chill))
 
         return {
-            "temperature": _temp(data["Temperature"]),
+            "temperature": _temp(cast(str, data["Temperature"])),
             "wind": wind,
             "wind_chill": wind_chill,
         }
