@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
 
 from mt_washington_mcp.models import SummitConditions
 from mt_washington_mcp.server import current_f6, get_f6
