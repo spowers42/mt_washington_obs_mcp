@@ -1,7 +1,9 @@
 from datetime import datetime
+
 from fastmcp import FastMCP
 
 from mt_washington_mcp.client import WeatherClient
+from mt_washington_mcp.f6 import extract_f6_table
 from mt_washington_mcp.models import OutlookReport, SummitConditions
 
 mcp = FastMCP(
@@ -64,6 +66,26 @@ async def get_f6(year:int, month:int) -> bytes:
     async with WeatherClient() as client:
         data = await client.get_f6_pdf(year, month)
     return data
+
+
+@mcp.tool()
+async def extract_f6_csv(year: int | None = None, month: int | None = None) -> str:
+    """Extract the daily data table from an F6 PDF form as CSV.
+
+    Fetches the F6 PDF for the given year/month and parses the
+    main data table (temperature, precipitation, wind, sunshine,
+    sky cover, weather occurrences) into CSV format.
+
+    Args:
+        year: Calendar year (2005–present). Defaults to current year.
+        month: Month number (1–12). Defaults to current month.
+    """
+    now = datetime.now()
+    year = year or now.year
+    month = month or now.month
+    async with WeatherClient() as client:
+        pdf = await client.get_f6_pdf(year, month)
+    return extract_f6_table(pdf)
 
 
 def main() -> None:

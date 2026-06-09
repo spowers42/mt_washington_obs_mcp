@@ -54,18 +54,20 @@ Resources are the primary data access mechanism. Tools will be added later for p
 | `f6://current` | Current month's F6 PDF (raw bytes) | PDF endpoint |
 | `f6://{year}/{month}` | F6 PDF for given year/month (raw bytes) | PDF endpoint |
 
+### Tools
+
+| Tool | Description | Data source |
+|---|---|---|
+| `extract_f6_csv` | Extract F6 PDF daily data table as CSV | `f6://{year}/{month}` resource |
+| `list_available_f6` | List years/months with available F6 forms | Derived from PDF URL pattern |
+
 ### Implementation ✅
 
 - [x] FastMCP server with all `weather://` and `f6://` resources
 - [x] `main()` wired to `mcp.run()`
+- [x] `extract_f6_csv` tool for PDF table extraction
 - [x] 9 tests: 5 for JSON resource output + 4 for F6 PDF resource output
-
-### Planned Tools (future)
-
-| Tool | Description | Data source |
-|---|---|---|
-| `parse_f6_form` | Parse F6 PDF daily data table into JSON | F6 PDF resource |
-| `list_available_f6` | List years/months with available F6 forms | Derived from PDF URL pattern |
+- [x] 12 tests for F6 CSV extraction from fixture PDF
 
 ## Phase 4: Quality & DX ✅
 
