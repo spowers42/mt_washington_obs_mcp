@@ -6,7 +6,7 @@ tasks:
   default:
     desc: Run the MCP server
     cmds:
-      - uv run mtw-obs-mcp
+      - fastmcp run src/mt_washington_mcp/server.py:mcp
 
   test:
     desc: Run the test suite
@@ -34,3 +34,9 @@ tasks:
       - task: lint
       - task: typecheck
       - task: test
+
+  inspect:
+    desc: Inspect the MCP server
+    cmds:
+      - fastmcp inspect src/mt_washington_mcp/server.py:mcp
+  
