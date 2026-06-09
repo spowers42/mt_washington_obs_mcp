@@ -48,10 +48,18 @@ All data is available as MCP resources:
 | `weather://current` | JSON | Current summit temperature, wind, gusts, direction, METAR |
 | `weather://outlook/current` | JSON | Full outlook metadata (excludes sub-sections with dedicated URIs) |
 | `weather://outlook/summit` | JSON | Higher Summits Forecast with 4-period discussion |
+| `weather://outlook/valley` | JSON | Valley Forecast with 4-period discussion |
 | `weather://outlook/statistics` | JSON | Past 24h: max/min temp, peak gust, precip, snowfall |
 | `weather://outlook/almanac` | JSON | Records, monthly averages, sunrise/sunset |
 | `f6://current` | PDF (bytes) | Current month's F6 form |
 | `f6://{year}/{month}` | PDF (bytes) | F6 form for a specific year/month |
+
+## Tools
+
+| Tool | Description |
+|---|---|
+| `extract_f6_csv(year?, month?)` | Extract F6 PDF daily data table as CSV |
+| `list_f6_forms()` | List all available year/month combinations as CSV |
 
 ## Development
 
@@ -85,15 +93,19 @@ task typecheck
 mt_washington_obs_mcp/
 ├── src/mt_washington_mcp/
 │   ├── client.py      # Async httpx WeatherClient
+│   ├── f6.py          # F6 PDF table extraction
 │   ├── models.py      # Pydantic models with validators
-│   ├── server.py      # FastMCP server + resources
+│   ├── server.py      # FastMCP server + resources + tools
 │   ├── __init__.py    # Entry point
 │   └── __main__.py    # python -m support
 ├── tests/
 │   ├── test_client.py # Client tests with httpx.MockTransport
+│   ├── test_f6.py     # F6 PDF extraction tests
 │   ├── test_models.py # Model parsing and validation tests
 │   ├── test_server.py # Resource output format tests
 │   └── fixtures/      # Saved API snapshots
+├── .github/workflows/
+│   └── ci.yml         # GitHub Actions CI
 ├── pyproject.toml
 └── Taskfile.yml
 ```

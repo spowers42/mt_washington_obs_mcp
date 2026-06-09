@@ -2,11 +2,12 @@
 
 import csv
 import io
+from datetime import datetime
 from pathlib import Path
 
 import pytest
 
-from mt_washington_mcp.f6 import extract_f6_table
+from mt_washington_mcp.f6 import extract_f6_table, list_f6_available
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -106,3 +107,39 @@ class TestExtractF6Table:
             assert r["avg_temp_f"] == ""
             assert r["depart_temp_f"] == ""
             assert r["heat_degree_days"] == ""
+
+
+class TestListF6Available:
+    def test_starts_at_2005(self):
+        entries = list(list_f6_available())
+        assert entries[0] == (2005, 1)
+
+    def test_ends_at_current_month(self):
+        entries = list(list_f6_available())
+        now = datetime.now()
+        assert entries[-1] == (now.year, now.month)
+
+    def test_has_all_months_for_past_year(self):
+        entries = list(list_f6_available())
+        years = {y for y, m in entries}
+        assert 2025 in years
+        assert 2024 in years
+        last_year = [m for y, m in entries if y == 2025]
+        assert len(last_year) == 12
+
+    def test_january_always_present(self):
+        jan = [m for y, m in list_f6_available() if m == 1]
+        assert len(jan) > 0
+        assert len(jan) == datetime.now().year - 2005 + 1
+
+    def test_months_are_sequential(self):
+        entries = list(list_f6_available())
+        for i in range(1, len(entries)):
+            prev_y, prev_m = entries[i - 1]
+            y, m = entries[i]
+            if prev_m == 12:
+                assert y == prev_y + 1
+                assert m == 1
+            else:
+                assert y == prev_y
+                assert m == prev_m + 1

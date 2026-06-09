@@ -1,6 +1,7 @@
 import csv
 import io
 from datetime import datetime
+from typing import Iterator
 
 import pdfplumber
 
@@ -73,3 +74,11 @@ def extract_f6_table(pdf_bytes: bytes) -> str:
         writer.writerow([month_name, year] + clean_row)
 
     return buf.getvalue()
+
+
+def list_f6_available() -> Iterator[tuple[int, int]]:
+    now = datetime.now()
+    for year in range(2005, now.year + 1):
+        end_month = now.month if year == now.year else 12
+        for month in range(1, end_month + 1):
+            yield (year, month)
