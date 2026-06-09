@@ -1,5 +1,5 @@
 from datetime import datetime
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 from mt_washington_mcp.client import WeatherClient
 from mt_washington_mcp.models import OutlookReport, SummitConditions
