@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 
-from mt_washington_mcp.models import SummitConditions
+from mt_washington_mcp.models import OutlookReport, SummitConditions
 from mt_washington_mcp.server import current_f6, get_f6
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -111,3 +111,44 @@ class TestF6Resource:
         await current_f6()
         now = datetime.now()
         mock_get_f6.assert_called_once_with(now.year, now.month)
+
+
+class TestValleyOutlookResource:
+    """Validates JSON output of the weather://outlook/valley resource."""
+
+    def test_output_is_valid_json(self):
+        with open(FIXTURES / "outlook.json") as f:
+            raw = json.load(f)
+        report = OutlookReport.model_validate(raw)
+        output = report.valley_outlook.model_dump_json(indent=2)
+        parsed = json.loads(output)
+        assert isinstance(parsed, dict)
+
+    def test_top_level_fields(self):
+        with open(FIXTURES / "outlook.json") as f:
+            raw = json.load(f)
+        report = OutlookReport.model_validate(raw)
+        output = json.loads(report.valley_outlook.model_dump_json())
+        assert "alert" in output
+        assert "forecast1" in output
+        assert "forecast2" in output
+        assert "forecast3" in output
+        assert "forecast4" in output
+
+    def test_forecast_period_structure(self):
+        with open(FIXTURES / "outlook.json") as f:
+            raw = json.load(f)
+        report = OutlookReport.model_validate(raw)
+        output = json.loads(report.valley_outlook.model_dump_json())
+        f1 = output["forecast1"]
+        assert "period" in f1
+        assert "synopsis" in f1
+        assert "high_low" in f1
+        assert "imperial" in f1
+        assert "metric" in f1
+
+    def test_forecast_has_discussion(self):
+        with open(FIXTURES / "outlook.json") as f:
+            raw = json.load(f)
+        report = OutlookReport.model_validate(raw)
+        assert report.valley_outlook.discussion is not None
